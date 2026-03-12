@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome | Student Predictor{% endblock %}
+
+{% block content %}
+<section class="grid md:grid-cols-2 gap-10 items-center py-10">
+    <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600 mb-3">
+            Flask Machine Learning Project
+        </p>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight text-slate-900 mb-5">
+            Predict Student Math Scores with Confidence
+        </h1>
+        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            This app uses student background and academic details to estimate
+            a math score. Start by entering the required information on the
+            prediction page.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+            <a href="{{ url_for('predict_datapoint') }}"
+               class="inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 text-white font-semibold shadow hover:bg-cyan-700 transition">
+                Go to Prediction Form
+            </a>
+            <a href="#about"
+               class="inline-flex items-center rounded-xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50 transition">
+                Learn More
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-8">
+        <h2 class="text-2xl font-bold mb-4 text-slate-900">What this project does</h2>
+        <ul class="space-y-3 text-slate-600">
+            <li>• Collects student demographic and academic input</li>
+            <li>• Sends the form data to your Flask backend</li>
+            <li>• Runs the ML pipeline for prediction</li>
+            <li>• Displays the predicted math score on the result page</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

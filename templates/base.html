@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Student Exam Performance Indicator{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+    <nav class="bg-slate-900 text-white shadow-md">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="{{ url_for('index') }}" class="text-xl font-bold tracking-wide">
+                Student Predictor
+            </a>
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <a href="{{ url_for('index') }}" class="hover:text-cyan-300 transition">Home</a>
+                <a href="{{ url_for('predict_datapoint') }}" class="hover:text-cyan-300 transition">Predict</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-10">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t bg-white mt-12">
+        <div class="max-w-6xl mx-auto px-6 py-4 text-sm text-slate-500 text-center">
+            End To End ML Project • Student Exam Performance Indicator by Your Name •<p class="font-semibold"> Abdur Rahman Arafat</p> <a href="https://www.linkedin.com/in/arafat10017/" class="text-cyan-600 hover:underline">LinkedIn</a> • <a href="https://github.com/Ranger-DRAX" class="text-cyan-600 hover:underline">GitHub</a>
+
+        </div>
+    </footer>
+</body>
+</html>
