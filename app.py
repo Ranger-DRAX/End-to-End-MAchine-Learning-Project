@@ -1,9 +1,13 @@
+import os
 from flask import Flask, request, render_template
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 
 application = Flask(__name__)
 app = application
 
+if not os.path.exists("artifacts/model.pkl"):
+    from src.pipeline.train_pipeline import run_training_pipeline
+    run_training_pipeline()
 
 # Landing page
 @app.route("/")
