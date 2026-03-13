@@ -392,7 +392,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👤 Author
 
 **Arafat**
-- Email: abdurrahmanarafat10017@gmail.com
 - GitHub: [@Ranger-DRAX](https://github.com/Ranger-DRAX)
 
 ## 🙏 Acknowledgments
